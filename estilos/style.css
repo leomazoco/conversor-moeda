@@ -53,7 +53,7 @@ section#conversor-moeda {
     text-align: center;
 }
 
-.campo-moeda > .digitado {
+.campo-moeda > .valor-moeda {
     border-radius: 5px;
     border: solid black .1em;
     height: 30px;
@@ -73,7 +73,12 @@ section#conversor-moeda {
     border: 5px;
 }
 
-#seletor-moeda {
+#seletor-moeda1 {
+    height: 30px;
+    cursor: pointer;
+}
+
+#seletor-moeda2 {
     height: 30px;
     cursor: pointer;
 }
