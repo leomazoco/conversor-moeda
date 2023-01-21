@@ -1,6 +1,8 @@
 var valorNormal = document.getElementById('valorInteiro');
 var moeda1 = document.getElementById('seletor-moeda1');
 var moeda2 = document.getElementById('seletor-moeda2');
+var result = document.getElementById('resultado')
+var primeiroValor = document.getElementById('valorPrimeiro')
 var valorDolar_Real = 5.21;
 var valorEuro_Real = 5.66;
 var valorLibra_Real = 6.45;
@@ -16,8 +18,10 @@ function converter() {
 
     //Conversor real para dolar
     if (moeda1[0].selected && moeda2[1].selected){
-        valorConvertido = (valorConverter*valorDolar_Real).toFixed(2)
-        console.log(`O valor em dolar é de ${valorConvertido}`)
+        valorConvertido = (valorConverter*valorDolar_Real).toFixed(2);
+        primeiroValor.innerHTML = `R$ ${valorConverter} é igual a:` 
+        result.innerHTML += `<p>US$ ${valorConvertido}</p>`
+        //console.log(`O valor em dolar é de ${valorConvertido}`)
     //Real para Euro
     } else if (moeda1[0].selected && moeda2[2].selected){
         valorConvertido = (valorConverter*valorEuro_Real).toFixed(2)
@@ -56,6 +60,12 @@ function converter() {
     } else if (moeda1[3].selected && moeda2[0].selected){
         valorConvertido = (valorConverter*valorLibra_Real).toFixed(2)
         console.log(`O valor de Libra para Real é de ${valorConvertido}`)
+    } else if (moeda1[3].selected && moeda2[1].selected){
+        valorConvertido = (valorConverter/valorDolar_Libra).toFixed(2)
+        console.log(`O valor de Libra para dolar é de ${valorConvertido}`)
+    } else if (moeda1[3].selected && moeda2[2].selected){
+        valorConvertido = (valorConverter/valorEuro_Libra).toFixed(2)
+        console.log(`O valor de Libra para Euro é de ${valorConvertido}`)
     } else {
         console.log('Confira o valor declarado ou a moeda')
     }
