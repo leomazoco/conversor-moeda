@@ -25,13 +25,14 @@ section#conversor-moeda {
     left: 50%;
     overflow: hidden;
     background-color: white;
-    height: 300px;
+    height: auto;
     width: 380px;
     border-radius: 20px;
 
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.445);
 
     transform: translate(-50%, -50%);
+
 }
 
 #conversor-moeda > .texto-informacao {
@@ -119,3 +120,8 @@ footer {
     -webkit-font-smoothing: antialiased;
     padding: 5px;
   }
+
+.valor-convertido {
+    padding: 20px;
+    visibility: hidden;
+}

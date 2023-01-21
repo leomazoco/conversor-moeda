@@ -11,6 +11,9 @@
 <body>
     <main>
         <section id="conversor-moeda">
+            <div class="conversor-alerta">
+                <p class="alerta"></p>
+            </div>
             <div class="conversor-esquerda">
                 <div class="texto-informacao">
                     <h1>Conversor Monetário</h1>
@@ -42,8 +45,9 @@
                     </form>
                 </div>
                 <div class="bottao-converter">
-                    <button>Converter</button>
+                    <button onclick="converter()">Converter</button>
                 </div>
+                <div class="valor-convertido"><p class="resultado">RESULTADO</p></div>
             </div>
         </section>
     </main>
@@ -52,5 +56,6 @@
         <p>Este site foi desenvolvido apenas para exibição em portfólio.</p>
         <p>Os valores de câmbio foram definidos conforme as taxas do dia 21/01/2023. A taxa não recebe atualização diária</p>
     </footer>
+    <script src="script/script.js"></script>
 </body>
 </html>
