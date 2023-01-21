@@ -128,9 +128,9 @@ footer {
     padding: 5px;
   }
 
-/*.valor-resultado {
+#valor-resultado {
     display: none;
-}*/
+}
 
 .valorPi {
     padding: 1px;
@@ -141,6 +141,7 @@ footer {
 }
 
 .valor-convertido {
-    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 10px;
 
 }

@@ -3,6 +3,7 @@ var moeda1 = document.getElementById('seletor-moeda1');
 var moeda2 = document.getElementById('seletor-moeda2');
 var result = document.getElementById('resultado')
 var primeiroValor = document.getElementById('valorPrimeiro')
+var displayResult = document.getElementById('valor-resultado')
 var valorDolar_Real = 5.21;
 var valorEuro_Real = 5.66;
 var valorLibra_Real = 6.45;
@@ -19,53 +20,87 @@ function converter() {
     //Conversor real para dolar
     if (moeda1[0].selected && moeda2[1].selected){
         valorConvertido = (valorConverter*valorDolar_Real).toFixed(2);
-        primeiroValor.innerHTML = `R$ ${valorConverter} é igual a:` 
-        result.innerHTML += `<p>US$ ${valorConvertido}</p>`
+        displayResult.style.display = 'block'
+        primeiroValor.innerHTML = `R$ ${valorConverter} Real brasileiro é igual a:` 
+        result.innerHTML = `<p>US$ ${valorConvertido} Dolar americano</p>`
         //console.log(`O valor em dolar é de ${valorConvertido}`)
     //Real para Euro
     } else if (moeda1[0].selected && moeda2[2].selected){
         valorConvertido = (valorConverter*valorEuro_Real).toFixed(2)
-        console.log(`O valor em euro é de ${valorConvertido}`)
+        //console.log(`O valor em euro é de ${valorConvertido}`)
+        displayResult.style.display = 'block'
+        primeiroValor.innerHTML = `R$ ${valorConverter} Real brasileiro é igual a:` 
+        result.innerHTML = `<p>&euro; ${valorConvertido} Euros</p>`
     //Real para Libra
     } else if (moeda1[0].selected && moeda2[3].selected){
         valorConvertido = (valorConverter*valorLibra_Real).toFixed(2)
-        console.log(`O valor em libra é de ${valorConvertido}`)
+        //console.log(`O valor em libra é de ${valorConvertido}`)
+        displayResult.style.display = 'block'
+        primeiroValor.innerHTML = `R$ ${valorConverter} Real brasileiro é igual a:` 
+        result.innerHTML = `<p>&pound; ${valorConvertido} libra esterlina</p>`
 
     //CONVERTER DOLAR
 
     } else if (moeda1[1].selected && moeda2[0].selected){
-        valorConvertido = (valorConverter/valorDolar).toFixed(2)
-        console.log(`O valor de Dolar para Real é de ${valorConvertido}`)
+        valorConvertido = (valorConverter*valorDolar_Real).toFixed(2)
+        //console.log(`O valor de Dolar para Real é de ${valorConvertido}`)
+        displayResult.style.display = 'block'
+        primeiroValor.innerHTML = `US$ ${valorConverter} Dolar é igual a:` 
+        result.innerHTML = `<p>R$ ${valorConvertido} real brasileiro</p>`
     //Dolar pra Euro
     } else if (moeda1[1].selected && moeda2[2].selected) {
         valorConvertido = (valorConverter*valorDolar_Euro).toFixed(2)
-        console.log(`O valor de Dolar para Euro é de ${valorConvertido}`)
+        //console.log(`O valor de Dolar para Euro é de ${valorConvertido}`)
+        displayResult.style.display = 'block'
+        primeiroValor.innerHTML = `US$ ${valorConverter} Dolar é igual a:` 
+        result.innerHTML = `<p>&euro; ${valorConvertido} Euros</p>`
     //Dolar para Libra
     } else if (moeda1[1].selected && moeda2[3].selected) {
         valorConvertido = (valorConverter*valorDolar_Libra).toFixed(2)
-        console.log(`O valor de Dolar para Libra é de ${valorConvertido}`)
+        //console.log(`O valor de Dolar para Libra é de ${valorConvertido}`)
+        displayResult.style.display = 'block'
+        primeiroValor.innerHTML = `US$ ${valorConverter} Dolar é igual a:` 
+        result.innerHTML = `<p>&pound; ${valorConvertido} Libra esterlina</p>`
 
         // CONVERTER EURO
     } else if (moeda1[2].selected && moeda2[0].selected){
         valorConvertido = (valorConverter*valorEuro_Real).toFixed(2)
-        console.log(`O valor de Euro para Real é de ${valorConvertido}`)
+        //console.log(`O valor de Euro para Real é de ${valorConvertido}`)
+        displayResult.style.display = 'block'
+        primeiroValor.innerHTML = `&euro; ${valorConverter} Euro é igual a:` 
+        result.innerHTML = `<p>R$ ${valorConvertido} Real brasileiro</p>`
     } else if (moeda1[2].selected && moeda2[1].selected) {
         valorConvertido = (valorConverter/valorDolar_Euro).toFixed(2)
-        console.log(`O valor de Euro para dolar é de ${valorConvertido}`)
+        //console.log(`O valor de Euro para dolar é de ${valorConvertido}`)
+        displayResult.style.display = 'block'
+        primeiroValor.innerHTML = `&euro; ${valorConverter} Euro é igual a:` 
+        result.innerHTML = `<p>US$ ${valorConvertido} Dolar americano</p>`
     } else if (moeda1[2].selected && moeda2[3].selected){
         valorConvertido = (valorConverter*valorEuro_Libra).toFixed(2)
-        console.log(`O valor de Euro para libra é de ${valorConvertido}`)
+        displayResult.style.display = 'block'
+        primeiroValor.innerHTML = `&euro; ${valorConverter} Euro é igual a:` 
+        result.innerHTML = `<p>&pound; ${valorConvertido} Libra esterlina</p>`
+        //console.log(`O valor de Euro para libra é de ${valorConvertido}`)
     
     //CONVERTER LIBRA
     } else if (moeda1[3].selected && moeda2[0].selected){
         valorConvertido = (valorConverter*valorLibra_Real).toFixed(2)
-        console.log(`O valor de Libra para Real é de ${valorConvertido}`)
+        //console.log(`O valor de Libra para Real é de ${valorConvertido}`)
+        displayResult.style.display = 'block'
+        primeiroValor.innerHTML = `&pound; ${valorConverter} Libra esterlina é igual a:` 
+        result.innerHTML = `<p>R$ ${valorConvertido} Real brasileiro</p>`
     } else if (moeda1[3].selected && moeda2[1].selected){
         valorConvertido = (valorConverter/valorDolar_Libra).toFixed(2)
-        console.log(`O valor de Libra para dolar é de ${valorConvertido}`)
+        //console.log(`O valor de Libra para dolar é de ${valorConvertido}`)
+        displayResult.style.display = 'block'
+        primeiroValor.innerHTML = `&pound; ${valorConverter} Libra esterlina é igual a:` 
+        result.innerHTML = `<p>US$ ${valorConvertido} Dolar americano</p>`
     } else if (moeda1[3].selected && moeda2[2].selected){
         valorConvertido = (valorConverter/valorEuro_Libra).toFixed(2)
-        console.log(`O valor de Libra para Euro é de ${valorConvertido}`)
+        //console.log(`O valor de Libra para Euro é de ${valorConvertido}`)
+        displayResult.style.display = 'block'
+        primeiroValor.innerHTML = `&pound; ${valorConverter} Libra esterlina é igual a:` 
+        result.innerHTML = `<p>&euro; ${valorConvertido} Euro</p>`
     } else {
         console.log('Confira o valor declarado ou a moeda')
     }
