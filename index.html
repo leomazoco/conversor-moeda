@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="estilos/style.css">
+    <title>Conversor de Moedas</title>
+</head>
+<body>
+    <main>
+        <section id="conversor-moeda">
+            <div class="conversor-esquerda">
+                <div class="texto-informacao">
+                    <h1>Conversor Monetário</h1>
+                    <p>Insira o valor que deseja converter e escolha a moeda que deseja:</p>
+                </div>
+                <div class="valores-moedas">
+                    <form action="conversor.php">
+                        <div class="campo-moeda">
+                            <input class="digitado" type="number" class="valor-moeda">
+                        </div>
+                        <div class="tipos-moedas">
+                            <div class="tipo-moeda-mae">
+                                <select name="seletor" id="seletor-moeda">
+                                    <option value="valor1">Real (BRL)</option>
+                                    <option value="valor2">Dólar (US$)</option>
+                                    <option value="valor3">Euro()</option>
+                                    <option value="valor4">Libra ()</option>
+                                </select>
+                                <i class="material-icons">Swap Horiz</i>
+                            </div>
+                            <div class="tipo-moeda-convertida">
+                                <select name="seletor" id="seletor-moeda">
+                                    <option value="valor1">Real (BRL)</option>
+                                    <option value="valor2">Dólar (US$)</option>
+                                    <option value="valor3">Euro()</option>
+                                    <option value="valor4">Libra ()</option>
+                                </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="bottao-converter">
+                    <button>Converter</button>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>Desenvolvido por Leonardo Mazoco</p>
+            <p>Este site foi desenvolvido apenas para exibição em portfólio.</p>
+            <p>Os valores de câmbio foram definidos conforme as taxas do dia 21/01/2023. A taxa não recebe atualização diária</p>
+        </footer>
+    </main>
+</body>
+</html>
