@@ -108,8 +108,10 @@ footer {
     text-align: center;
     opacity: .5;
     padding: 5px;
-    position: absolute;
+    position: relative;
+    font-size: 14px;
 }
+
 
 .material-icons-outlined {
     font-family: 'Material Icons';
