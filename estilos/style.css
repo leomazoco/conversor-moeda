@@ -43,6 +43,15 @@ section#conversor-moeda {
     padding: 15px;
 }
 
+#conversor-alerta {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: rgba(214, 42, 42, 0.438);
+    display: none;
+}
+
 .texto-informacao > p {
     padding-left: 15px;
     padding-bottom: 10px;

@@ -4,6 +4,8 @@ var moeda2 = document.getElementById('seletor-moeda2');
 var result = document.getElementById('resultado')
 var primeiroValor = document.getElementById('valorPrimeiro')
 var displayResult = document.getElementById('valor-resultado')
+var displayAlerta = document.getElementById('conversor-alerta')
+var mensagAlerta = document.getElementById('mensagemAlerta')
 var valorDolar_Real = 5.21;
 var valorEuro_Real = 5.66;
 var valorLibra_Real = 6.45;
@@ -102,7 +104,9 @@ function converter() {
         primeiroValor.innerHTML = `&pound; ${valorConverter} Libra esterlina é igual a:` 
         result.innerHTML = `<p>&euro; ${valorConvertido} Euro</p>`
     } else {
-        console.log('Confira o valor declarado ou a moeda')
+        displayAlerta.style.display = 'block'
+        mensagAlerta.innerHTML = '<p>Por favor, verifique o valor digitado ou as moedas selecionadas</p>'
+
     }
 
     /*let valorConvertido = (valorConverter * valorDolar).toFixed(2)
