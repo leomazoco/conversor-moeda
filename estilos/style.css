@@ -76,11 +76,13 @@ section#conversor-moeda {
 #seletor-moeda1 {
     cursor: pointer;
     height: 30px;
+    border: solid black .5px;
 }
 
 #seletor-moeda2 {
     height: 30px;
     cursor: pointer;
+    border: solid black .5px;
 }
 
 button:hover {
@@ -125,6 +127,10 @@ footer {
     -webkit-font-smoothing: antialiased;
     padding: 5px;
   }
+
+/*.valor-resultado {
+    display: none;
+}*/
 
 .valorPi {
     padding: 1px;
