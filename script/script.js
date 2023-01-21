@@ -22,6 +22,7 @@ function converter() {
     //Conversor real para dolar
     if (moeda1[0].selected && moeda2[1].selected){
         valorConvertido = (valorConverter*valorDolar_Real).toFixed(2);
+        displayAlerta.style.display = 'none'
         displayResult.style.display = 'block'
         primeiroValor.innerHTML = `R$ ${valorConverter} Real brasileiro é igual a:` 
         result.innerHTML = `<p>US$ ${valorConvertido} Dolar americano</p>`
@@ -30,6 +31,7 @@ function converter() {
     } else if (moeda1[0].selected && moeda2[2].selected){
         valorConvertido = (valorConverter*valorEuro_Real).toFixed(2)
         //console.log(`O valor em euro é de ${valorConvertido}`)
+        displayAlerta.style.display = 'none'
         displayResult.style.display = 'block'
         primeiroValor.innerHTML = `R$ ${valorConverter} Real brasileiro é igual a:` 
         result.innerHTML = `<p>&euro; ${valorConvertido} Euros</p>`
@@ -37,6 +39,7 @@ function converter() {
     } else if (moeda1[0].selected && moeda2[3].selected){
         valorConvertido = (valorConverter*valorLibra_Real).toFixed(2)
         //console.log(`O valor em libra é de ${valorConvertido}`)
+        displayAlerta.style.display = 'none'
         displayResult.style.display = 'block'
         primeiroValor.innerHTML = `R$ ${valorConverter} Real brasileiro é igual a:` 
         result.innerHTML = `<p>&pound; ${valorConvertido} libra esterlina</p>`
@@ -46,6 +49,7 @@ function converter() {
     } else if (moeda1[1].selected && moeda2[0].selected){
         valorConvertido = (valorConverter*valorDolar_Real).toFixed(2)
         //console.log(`O valor de Dolar para Real é de ${valorConvertido}`)
+        displayAlerta.style.display = 'none'
         displayResult.style.display = 'block'
         primeiroValor.innerHTML = `US$ ${valorConverter} Dolar é igual a:` 
         result.innerHTML = `<p>R$ ${valorConvertido} real brasileiro</p>`
@@ -53,6 +57,7 @@ function converter() {
     } else if (moeda1[1].selected && moeda2[2].selected) {
         valorConvertido = (valorConverter*valorDolar_Euro).toFixed(2)
         //console.log(`O valor de Dolar para Euro é de ${valorConvertido}`)
+        displayAlerta.style.display = 'none'
         displayResult.style.display = 'block'
         primeiroValor.innerHTML = `US$ ${valorConverter} Dolar é igual a:` 
         result.innerHTML = `<p>&euro; ${valorConvertido} Euros</p>`
@@ -60,6 +65,7 @@ function converter() {
     } else if (moeda1[1].selected && moeda2[3].selected) {
         valorConvertido = (valorConverter*valorDolar_Libra).toFixed(2)
         //console.log(`O valor de Dolar para Libra é de ${valorConvertido}`)
+        displayAlerta.style.display = 'none'
         displayResult.style.display = 'block'
         primeiroValor.innerHTML = `US$ ${valorConverter} Dolar é igual a:` 
         result.innerHTML = `<p>&pound; ${valorConvertido} Libra esterlina</p>`
@@ -68,17 +74,20 @@ function converter() {
     } else if (moeda1[2].selected && moeda2[0].selected){
         valorConvertido = (valorConverter*valorEuro_Real).toFixed(2)
         //console.log(`O valor de Euro para Real é de ${valorConvertido}`)
+        displayAlerta.style.display = 'none'
         displayResult.style.display = 'block'
         primeiroValor.innerHTML = `&euro; ${valorConverter} Euro é igual a:` 
         result.innerHTML = `<p>R$ ${valorConvertido} Real brasileiro</p>`
     } else if (moeda1[2].selected && moeda2[1].selected) {
         valorConvertido = (valorConverter/valorDolar_Euro).toFixed(2)
         //console.log(`O valor de Euro para dolar é de ${valorConvertido}`)
+        displayAlerta.style.display = 'none'
         displayResult.style.display = 'block'
         primeiroValor.innerHTML = `&euro; ${valorConverter} Euro é igual a:` 
         result.innerHTML = `<p>US$ ${valorConvertido} Dolar americano</p>`
     } else if (moeda1[2].selected && moeda2[3].selected){
         valorConvertido = (valorConverter*valorEuro_Libra).toFixed(2)
+        displayAlerta.style.display = 'none'
         displayResult.style.display = 'block'
         primeiroValor.innerHTML = `&euro; ${valorConverter} Euro é igual a:` 
         result.innerHTML = `<p>&pound; ${valorConvertido} Libra esterlina</p>`
@@ -88,23 +97,27 @@ function converter() {
     } else if (moeda1[3].selected && moeda2[0].selected){
         valorConvertido = (valorConverter*valorLibra_Real).toFixed(2)
         //console.log(`O valor de Libra para Real é de ${valorConvertido}`)
+        displayAlerta.style.display = 'none'
         displayResult.style.display = 'block'
         primeiroValor.innerHTML = `&pound; ${valorConverter} Libra esterlina é igual a:` 
         result.innerHTML = `<p>R$ ${valorConvertido} Real brasileiro</p>`
     } else if (moeda1[3].selected && moeda2[1].selected){
         valorConvertido = (valorConverter/valorDolar_Libra).toFixed(2)
+        displayAlerta.style.display = 'none'
         //console.log(`O valor de Libra para dolar é de ${valorConvertido}`)
         displayResult.style.display = 'block'
         primeiroValor.innerHTML = `&pound; ${valorConverter} Libra esterlina é igual a:` 
         result.innerHTML = `<p>US$ ${valorConvertido} Dolar americano</p>`
     } else if (moeda1[3].selected && moeda2[2].selected){
         valorConvertido = (valorConverter/valorEuro_Libra).toFixed(2)
+        displayAlerta.style.display = 'none'
         //console.log(`O valor de Libra para Euro é de ${valorConvertido}`)
         displayResult.style.display = 'block'
         primeiroValor.innerHTML = `&pound; ${valorConverter} Libra esterlina é igual a:` 
         result.innerHTML = `<p>&euro; ${valorConvertido} Euro</p>`
     } else {
         displayAlerta.style.display = 'block'
+        displayResult.style.display = 'none'
         mensagAlerta.innerHTML = '<p>Por favor, verifique o valor digitado ou as moedas selecionadas</p>'
 
     }
