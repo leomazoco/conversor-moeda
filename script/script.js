@@ -21,7 +21,7 @@ function converter() {
 
     //Conversor real para dolar
     if (moeda1[0].selected && moeda2[1].selected){
-        valorConvertido = (valorConverter*valorDolar_Real).toFixed(2);
+        valorConvertido = (valorConverter/valorDolar_Real).toFixed(2);
         displayAlerta.style.display = 'none'
         displayResult.style.display = 'block'
         primeiroValor.innerHTML = `R$ ${valorConverter} Real brasileiro é igual a:` 
@@ -29,7 +29,7 @@ function converter() {
         //console.log(`O valor em dolar é de ${valorConvertido}`)
     //Real para Euro
     } else if (moeda1[0].selected && moeda2[2].selected){
-        valorConvertido = (valorConverter*valorEuro_Real).toFixed(2)
+        valorConvertido = (valorConverter/valorEuro_Real).toFixed(2)
         //console.log(`O valor em euro é de ${valorConvertido}`)
         displayAlerta.style.display = 'none'
         displayResult.style.display = 'block'
@@ -37,7 +37,7 @@ function converter() {
         result.innerHTML = `<p>&euro; ${valorConvertido} Euros</p>`
     //Real para Libra
     } else if (moeda1[0].selected && moeda2[3].selected){
-        valorConvertido = (valorConverter*valorLibra_Real).toFixed(2)
+        valorConvertido = (valorConverter/valorLibra_Real).toFixed(2)
         //console.log(`O valor em libra é de ${valorConvertido}`)
         displayAlerta.style.display = 'none'
         displayResult.style.display = 'block'
