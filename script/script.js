@@ -17,7 +17,7 @@ var valorEuro_Libra = 0.88
 
 function converter() {
 
-    var valorConverter = Number(valorNormal.value);
+    var valorConverter = Number(valorNormal.value).toFixed(2);
 
     //Conversor real para dolar
     if (moeda1[0].selected && moeda2[1].selected){
